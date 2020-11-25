@@ -19,3 +19,4 @@ function pairOfSocks(arr) {
 
 const s = pairOfSocks([2, 2, 4, 2, 2, 3, 3, 3, 44, 6, 6, 4, 54, 4]);
 console.log(s);
+//this is the latest comment from mugabo kenny
