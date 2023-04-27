@@ -1,22 +1,13 @@
 function pairOfSocks(arr) {
-	let num = 0;
-	arr.forEach(sock => {
-		let sockArr = [];
-		for (let i = 0; i < arr.length; i++) {
-			if (arr[i] == sock) {
-				sockArr.push(arr[i]);
-				delete arr[i];
-			}
-		}
-		if (sockArr.length > 0 && sockArr.length % 2 == 0) {
-			num += parseInt(sockArr.length / 2);
-		} else if (sockArr.length > 0 && sockArr.length % 2 != 0) {
-			num += parseInt((sockArr.length - 1) / 2);
-		}
-	});
-	return num;
+	const colors = new Set();
+  let pairs = 0;
+  for (let i = 0; i < n; i++) {
+    if (colors.has(ar[i])) {
+      pairs++;
+      colors.delete(ar[i]);
+    } else {
+      colors.add(ar[i]);
+    }
+  }
+  return pairs;
 }
-
-const s = pairOfSocks([2, 2, 4, 2, 2, 3, 3, 3, 44, 6, 6, 4, 54, 4]);
-console.log(s);
-//this is the latest comment from mugabo kenny
